@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Unnamed">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jetty-util-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-xml-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-io-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-security-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-webapp-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-server-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-continuation-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-http-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-servlet-7.2.2.v20101205.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tomcat-6.0.16-tomcat-juli.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsp-2.1-glassfish-9.1.1.B60.25.p2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsp-api-2.1-glassfish-9.1.1.B60.25.p2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/core-3.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.15-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-security-7.2.2.v20101205.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+  </library>
+</component>

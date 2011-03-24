@@ -1,0 +1,55 @@
+<project name="rs" default="create-war" basedir=".">
+    <property name="classes.dir" value="src/main/webapp/WEB-INF/classes"/>
+    <property name="src.dir" value="src"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="dest.dir" value="dest"/>
+
+    <path id="classpath.compilation">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${dest.dir}"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${dest.dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="${classes.dir}" classpathref="classpath.compilation"/>
+    </target>
+
+    <target name="create-war" depends="compile">
+        <war destfile="${dest.dir}/recruit.war" webxml="src/main/webapp/WEB-INF/web.xml">
+            <fileset dir="src/main/webapp/WEB-INF">
+                <exclude name="**/web.xml"/>
+                <exclude name="**/classes/"/>
+            </fileset>
+            <fileset dir="src/main/webapp">
+                <include name="*.jsp"/>
+                <include name="**/css/*"/>
+                <include name="**/script/*"/>
+            </fileset>
+            <lib dir="${lib.dir}">
+                <exclude name="servlet-api-2.5.jar"/>
+                <exclude name="servlet-2.3.jar"/>
+                <exclude name="jasper-6.0.13-G543818.jar"/>
+            </lib>
+            <classes dir="${classes.dir}"/>
+        </war>
+        <exec executable="deploy.sh"/>
+    </target>
+    <!--<target name="run-server" depends="create-war" >
+        <java classname="com.rs.core.WebServer" fork="yes" dir="${basedir}/webapp/WEB-INF/classes/">
+            <jvmarg value="-Xms128m"/>
+            <jvmarg value="-Xmx768m"/>
+            <sysproperty key="environment" value="build"/>
+            <classpath>
+                <path refid="classpath.compilation"/>
+            </classpath>
+        </java>
+    </target>-->
+</project>
